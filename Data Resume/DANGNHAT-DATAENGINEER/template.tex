@@ -1,0 +1,411 @@
+% FortySecondsCV LaTeX template
+% Copyright © 2019-2020 René Wirnata <rene.wirnata@pandascience.net>
+% Licensed under the 3-Clause BSD License. See LICENSE file for details.
+%
+% Please visit https://github.com/PandaScience/FortySecondsCV for the most
+% recent version! For bugs or feature requests, please open a new issue on
+% github.
+%
+% Contributors
+% ------------
+% * ifokkema
+% * Bertbk
+% * Hespe
+%
+% Attributions
+% ------------
+% * fortysecondscv is based on the twentysecondcv class by Carmine Spagnuolo
+%   (cspagnuolo@unisa.it), released under the MIT license and available under
+%   https://github.com/spagnuolocarmine/TwentySecondsCurriculumVitae-LaTex
+% * further attributions are indicated immediately before corresponding code
+
+
+%-------------------------------------------------------------------------------
+%                             ADDITIONAL PACKAGES
+%-------------------------------------------------------------------------------
+\documentclass[
+	a4paper,
+	% showframes,
+	% vline=2.2em,
+	% maincolor=cvgreen,
+	% sidecolor=gray!50,
+	% sectioncolor=red,
+	% subsectioncolor=orange,
+	% itemtextcolor=black!80,
+	% sidebarwidth=0.4\paperwidth,
+	% topbottommargin=0.03\paperheight,
+	% leftrightmargin=20pt,
+	% profilepicsize=4.5cm,
+	% profilepicborderwidth=3.5pt,
+	% profilepicstyle=profilecircle,
+	% profilepiczoom=1.0,
+	% profilepicxshift=0mm,
+	% profilepicyshift=0mm,
+	% profilepicrounding=1.0cm,
+]{fortysecondscv}
+
+% improve word spacing and hyphenation
+\usepackage{microtype}
+\usepackage{ragged2e}
+
+% uncomment in case you don't want any hyphenation
+% \usepackage[none]{hyphenat}
+
+% take care of proper font encoding
+\ifxetexorluatex
+	\usepackage{fontspec}
+	\defaultfontfeatures{Ligatures=TeX}
+%	\newfontfamily\headingfont[Path = fonts/]{segoeuib.ttf} % local font
+\else
+	\usepackage[utf8]{inputenc}
+	\usepackage[T1]{fontenc}
+%	\usepackage[sfdefault]{noto} % use noto google font
+\fi
+
+% enable mathematical syntax for some symbols like \varnothing
+\usepackage{amssymb}
+
+% bubble diagram configuration
+\usepackage{smartdiagram}
+\smartdiagramset{
+	% default font size is \large, so adjust to harmonize with sidebar layout
+	bubble center node font = \footnotesize,
+	bubble node font = \footnotesize,
+	% default: 4cm/2.5cm; make minimum diameter relative to sidebar size
+	bubble center node size = 0.4\sidebartextwidth,
+	bubble node size = 0.25\sidebartextwidth,
+	distance center/other bubbles = 1.5em,
+	% set center bubble color
+	bubble center node color = maincolor!70,
+	% define the list of colors usable in the diagram
+	set color list = {maincolor!10, maincolor!40,
+	maincolor!20, maincolor!60, maincolor!35},
+	% sets the opacity at which the bubbles are shown
+	bubble fill opacity = 0.8,
+}
+
+
+%-------------------------------------------------------------------------------
+%                            PERSONAL INFORMATION
+%-------------------------------------------------------------------------------
+%% mandatory information
+% your name
+\cvname{DANG NHAT}
+% job title/career
+\cvjobtitle{DATA ENGINEER}
+
+%% optional information
+% profile picture
+\cvprofilepic{anhCV.png}
+
+% NOTE: ordering in sidebar will mimic the following order
+% date of birth
+\cvbirthday{12/04/1995}
+% short address/location, use \newline if more than 1 line is required
+\cvaddress{Go Vap District, HCMC}
+% phone number
+\cvphone{+84 0354883673}
+% personal website
+%\cvsite{https://pandascience.net}
+% email address
+\cvmail{dangnhatsimon@gmail.com}
+% pgp key
+%\cvkey{4096R/FF00FF00}{0xAABBCCDDFF00FF00}
+% any other custom entry
+%\cvcustomdata{\faFlag}{Chinese}
+
+%-------------------------------------------------------------------------------
+%                              SIDEBAR 1st PAGE
+%-------------------------------------------------------------------------------
+% add more profile sections to sidebar on first page
+\addtofrontsidebar{
+	% include gosquare national flags from https://github.com/gosquared/flags;
+	% naming according to ISO 3166-1 alpha-2 country codes
+	\graphicspath{{pics/flags/}}
+
+	% social network accounts incl. proper hyperlinks
+	\profilesection{Profile}
+		\begin{icontable}{2.5em}{1em}
+			\social{\faLinkedin}
+				{https://www.linkedin.com/in/dangnhatsimon/}
+				{LinkedIn}
+			\social{\faGithub}
+				{https://github.com/dangnhatsimon}
+				{Github}
+		\end{icontable}
+
+	
+%	\profilesection{Hard Skills}
+%		\skill{\faBalanceScale}{Sleeping almost all day}
+%		\skill{\faSitemap}{Eating a lot of bamboo sprouts}
+%		\skill{\faGraduationCap}{Relaxing rest of the day}
+
+	\profilesection{Skills}
+    \chartlabel{Basic:}\\
+        \pointskill{}{Data Structures}{4}
+        \pointskill{}{Algorithms}{4}
+		\pointskill{}{Prob \& Stats}{4}\\
+	\chartlabel{Programming:}\\
+		\pointskill{}{Python, R, LaTeX}{4}
+        \pointskill{}{JavaScript, Scala}{3}
+    \chartlabel{Database:}\\
+    	\pointskill{}{MySQL, SQL Server}{4}
+		\pointskill{}{MongoDB}{4}
+	\chartlabel{Big Data:}\\
+        \pointskill{}{Hadoop, Spark}{3}\\
+	\chartlabel{Machine Learning:}\\
+ 		\pointskill{}{numpy, pandas, polars}{3}
+            \pointskill{}{polars, tensorflow}{3}
+            \pointskill{}{scikit-learn}{3}
+   \chartlabel{Data Visualization:}\\
+ 		\pointskill{}{Tableau, Power BI}{3}
+   \\
+   \chartlabel{Detail-oriented}
+   \chartlabel{Structured thinking}
+   \chartlabel{Analytical thinking}
+   \chartlabel{Hard working}
+   \\
+   \chartlabel{Teamwork}
+   \chartlabel{Data Storytelling}
+}
+
+
+%-------------------------------------------------------------------------------
+%                              SIDEBAR 2nd PAGE
+%-------------------------------------------------------------------------------
+\addtobacksidebar{
+	\profilesection{About Me}
+	\aboutme{
+		I am a results-driven Data Engineer with a passion for creating efficient data pipelines and optimizing data workflows. My expertise lies in designing and implementing robust data warehouses, modeling data structures for optimal performance, and integrating diverse data sources. With hands-on experience in data transformation and real-time processing, I am adept at turning raw data into actionable insights.
+	}
+
+    \profilesection{Languages}
+        \pointskill{}{Vietnamese}{5}
+		\pointskill{}{English}{3}
+        \pointskill{}{Russian}{4}
+        \pointskill{}{Chinese}{2}
+
+%	\profilesection{Diagrams}
+%	\begin{sidebarminipage}
+%	\chartlabel{with}
+%		\chartlabel{proper}
+%		\chartlabel{overflow}
+%		\chartlabel{protection}
+%		\chartlabel{for}
+%		\chartlabel{labels}
+%	\end{sidebarminipage}
+
+%	\begin{figure}\centering
+%		\smartdiagram[bubble diagram]{
+%			\textcolor{white}{\textbf{Being a}} \\
+%			\textcolor{white}{\textbf{Panda}}, % center bubble
+%			\textcolor{black!90}{Eating},
+%			\textcolor{black!90}{Sleeping},
+%			\textcolor{black!90}{Rolling},
+%			\textcolor{black!90}{Playing},
+%			\textcolor{black!90}{Chilling}
+%		}
+%	\end{figure}
+
+%	\chartlabel{Wheel Chart}
+%
+%	\wheelchart{3.7em}{2em}{%
+%	20/3em/maincolor!50/Chill,
+%	15/3em/maincolor!15/Play,
+%	20/3em/maincolor!20/Eat
+%	}
+
+%	\profilesection{Barskills}
+%	\barskill{\faSkyatlas}{Wearing asian rice hats}{60}
+%	\barskill{\faImage}{Playing Chess}{30}
+%	\barskill{\faMusic}{Playing the bamboo flute}{50}
+
+%	\profilesection{Memberships}
+%	\begin{memberships}
+%		\membership[4em]{pics/logo.png}{PandaScience.net}
+%		\membership[4em]{pics/logo.png}{Some longer text spanning over more than
+%			only one line}
+%	\end{memberships}
+}
+
+
+%-------------------------------------------------------------------------------
+%                         TABLE ENTRIES RIGHT COLUMN
+%-------------------------------------------------------------------------------
+\begin{document}
+
+\makefrontsidebar
+\cvsection{Working Experience}
+\begin{cvtable}[3]
+	\cvitem{Oct 2022 -- Present}{Data Engineer}{PECC2}{Contribute to Big Data Development Plan for Company. Hadoop, Spark for Data Analytics. Running automation with Python, Bash scripting on Ubuntu. Version control system like Git. Monitoring health of server computers.
+    \\Core technologies: Big Data Analytics, Python, Bash, Git, Ubuntu.
+    \\Getting data like power output, weather, current and voltage from site, through pipelines to database server at company, after processing and manipulating, data will be analyzed, visualized in apps. All reports and dynamic dashboard will be sended streaming to the end users to help them improve experiences, making decisions. 
+    \\Core technologies: ETL, Data Engineering, Python.}
+	\cvitem{Oct 2019 -- Oct 2022}{Mechanical Piping Engineer}{PECC2}{BIM Manager and Mechanical Lead. Using 3D laser scan data and BIM software to create and manage information.
+    \\Designing general plant layout for LNG Power Plant.
+    \\ Thermal-Mechanical and piping engineering for specific systems in Power Plants, engineering, reports, calculation spreadsheets, mechanical drawings. 
+    \\ Field engineer of Solar Farm Power.
+    \\ Core technologies: Piping and Instrumentation Drawing (P\&ID) · Control Valves · Pump · Conveyor Belts · Piping Design · Smart Plant 3D · AutoCAD Plant 3D · Pipe Stress Analysis · AutoCAD · Navisworks.}
+\end{cvtable}
+
+\cvsection{Project}
+\begin{cvtable}[3]    
+    \cvitem{Jul 2023 -- Jul 2023}{\color{cvsectioncolor}\href{https://github.com/dangnhatsimon/spark}{PySpark}}{\textbf{Data Engineer}}{
+    Understand Resilent Distributed Datasets (RDDs) of Spark, using pyspark to store data in distributed file system, transformation and actions datasets.
+    \\Spark SQL for Big Data Analytics. Create, import, inspecting, cleaning, querying and saving data with pyspark.
+    \\Core technologies: Python, Spark.
+    }
+
+    \cvitem{Jul 2023 -- Jul 2023}{\color{cvsectioncolor}\href{https://github.com/dangnhatsimon/python/tree/main/freecodecamp}{freeCodeCamp}}{\textbf{Data Engineer}}{
+    \\Mean-Variance-Standard Deviation Calculator: using Numpy to output the mean, variance, standard deviation, max, min, and sum of the rows, columns, and elements in matrix.
+    \\Demographic Data Analyzer: using Pandas to analyze, manipulate data from the 1994 Census database.
+    \\Medical Data Visualizer: converting, cleaning data, explore the relationship between cardiac disease, body measurements, blood markers, and lifestyle choices.
+    \\Page View Time Series Visualizer: using Pandas, Matplotlib, and Seaborn to visualize a dataset containing the number of page views each day on the freeCodeCamp.org forum from 2016-05-09 to 2019-12-03, understand the patterns in visits and identify yearly and monthly growth.
+    \\Sea Level Predictor: analyze a dataset of the global average sea level change since 1880, use the data to predict the sea level change through year 2050.
+    \\Core technologies: Data Analysis with Python by using library Numpy, Pandas, Seaborn, Matplotlib to ingest, process, manipulate, analyze and visualize data.}
+\end{cvtable}
+
+
+%\cvsubsection{Study}
+%\begin{cvtable}[1.5]
+%	\cvitem{2006 -- 2008}{Master Studies Panda Science}{Panda Academy}
+%		{Focus: Advanced rice hat studies and nouveau rain-reflecting cover
+%		materials.}
+%	\cvitem{}{Master Theses ($\varnothing\, 1,0$)}{Asian Rice Hat Institute}
+%		{Impact of solar radiation onto rice hat cover materials with special
+%		attention to water resistance.}
+%	\cvitem{2003 -- 2006}{Bachelor Studies PandaScience}{Panda Academy}
+%		{Focus: Bamboo morphology and its usage in different craftmanships.}
+%	\cvitem{}{Bachelor Theses ($\varnothing\, 1,0$)}{Bamboo Institute}
+%		{The bambo flute: An underestimated instrument in orchestras?}
+%\end{cvtable}
+
+%\cvsection{Publications}
+%\begin{cvtable}
+%	\cvpubitem{Cooking: 100 recipes for lazy Pandas}{Me and My Panda Friends}
+%		{Panda's Culinary World}{2010}
+%	\cvpubitem{Pandastasia}{Still Me}{Bamboo Books Assoc.}{2005}
+%\end{cvtable}
+
+
+%\cvsection{Awards}
+%\begin{cvtable}
+%	\cvitem{2010 -- now}{Panda of the Year}{Panda World Forum}{}
+%	\cvitem{2005 -- now}{Face of World Wide Fund for Nature}{WWF}{}
+%	\cvitem{2000}{Winner of Bamboo Sprouts Eating Contest}{Bamboo Society}{}
+%\end{cvtable}
+
+
+%\cvsection{Extra-Curricular Activities}
+%\begin{cvtable}
+%	\cvitemshort{Relaxing}{Master the fine art of relaxing everywhere}
+%	\cvitemshort{Music}{Playing the bamboo flute in the 1st Panda Orchestra}
+%	\cvitemshort{Education}{Teaching young pandas to be more panda-like}
+%\end{cvtable}
+
+
+\newpage
+\makebacksidebar
+
+\cvsection{Project}
+\begin{cvtable}[3]   
+    \cvitem{Oct 2022 -- Oct 2022}{\color{cvsectioncolor}\href{https://github.com/dangnhatsimon/case_bike_share}{Cyclistic Bike Share}}{\textbf{Data Analyst}}{
+    Using MySQL, R and Python to combine, cleaning, manipulate, analyze and visualize to get insights from 1 millions data casual and annual membership riders. Identify trend from Cyclistic’s historical bike trip data and then planning digital media could affect marketing tactics. 
+    \\Core technologies: MySQL, Python, R, Tableau.
+    }
+
+	\cvitem{Oct 2022 -- Oct 2022}{\color{cvsectioncolor}\href{https://github.com/dangnhatsimon/FitBit_fitness_tracker}{FitBit Fitness Tracker}}{\textbf{Data Analyst}}{
+    The user data from FitBit Fitness Tracker has been merged and categorised into different sections; daily activity, daily calories daily intensities, daily steps, etc. Using MySQL, R and Python to combine, cleaning, manipulate, analyze FitBit fitness tracker data to gain insights into how consumers are using the FitBit app and discover trends for Bellabeat marketing strategy. 
+    \\Core technologies: MySQL, Python, R, Tableau.
+    }
+\end{cvtable}
+
+\cvsection{Education}
+\cvsubsection{Undergraduate Study}
+\begin{cvtable}[1.5]
+	\cvitem{2014 -- 2019}{B.Sc. in Nuclear Power Engineering and Thermal Physics}{Russia}
+    {\textbf{Title}: Analysis of the transient mode in the VVER-1000 core when two main circulation pumps are switched off at rated power.\\
+	\textbf{Supervisors}: Prof. Leskin Sergei Terent’evich.\\
+	\textbf{Knowlegde}: Nuclear Power system and Nuclear Reactor, especially WWER-1000 · Steam Generator (Boiler) and Heat Exchangers · Steam Turbine · Industrial Pump · Nuclear reactor safety systems · Valves\\
+    \textbf{GPA}: 4.6/5.0}
+\end{cvtable}
+
+\cvsection{Certificate}
+\begin{cvtable}
+    \cvitem{Aug 2023}{Data Analysis with Python}{freeCodeCamp}{}
+    \cvitem{Aug 2023}{Python Intermediate}{Sololearn}{}
+    \cvitem{Aug 2023}{SQL Intermediate}{Sololearn}{}
+    \cvitem{Jul 2023}{Python (Basic) Certificate}{HackerRank}{}
+    \cvitem{Jul 2023}{SQL (Intermediate) Certificate}{HackerRank}{}
+	\cvitem{Jan 2023}{Google Data Analytics}{Coursera}{}
+    \cvitem{Jun 2023}{Google IT Automation with Python}{Coursera}{}
+	\cvitem{Jan 2022}{Lean Six Sigma Green Belt (ICGB)}{Business Research and Training, VN}{}
+	\cvitem{Sep 2018}{Olympic Internet Open}{Russia}{}
+    \cvitem{Sep 2016}{Russian young leader for Excellent student}{Russia}{}
+    \cvitem{Sep 2013}{Excellent in academic activities}{HCM University of Sciences, VN}{}
+\end{cvtable}
+% \newgeometry{
+% 	top=\topbottommargin,
+% 	bottom=\topbottommargin,
+% 	right=\leftrightmargin,
+% 	left=\leftrightmargin
+% }
+
+%\cvsection{section}
+%\cvsubsection{Subsection}
+%\begin{cvtable}
+%	\cvitem{<dates>}{<cv-item title>}{<location>}{<optional: description>}
+%\end{cvtable}
+
+%\cvsection{cvitem}
+%\cvsubsection{Multi-line with longer description}
+%\begin{cvtable}
+%	\cvitem{date}{Description}{location}{Some longer and more detailed
+%		description, that takes two lines of space instead of only one.}
+%	\cvitem{date}{Description}{location}{Some longer and more detailed
+%		description, that takes two lines of space instead of only one.}
+%	\cvitem{date}{Description}{location}{Some longer and more detailed
+%		description, that takes two lines of space instead of only one.}
+%\end{cvtable}
+
+%\cvsubsection{One-line without description}
+%\begin{cvtable}
+%	\cvitem{Award}{One-line description}{Sponsor}{}
+%	\cvitem{Award}{One-line description}{Sponsor}{}
+%	\cvitem{Award}{One-line description}{Sponsor}{}
+%\end{cvtable}
+
+%\cvsection{cvitemshort}
+%\cvsubsection{One-line}
+%\begin{cvtable}
+%	\cvitemshort{Key}{Some further description}
+%	\cvitemshort{Key}{Some further description}
+%	\cvitemshort{Key}{Some further description}
+%\end{cvtable}
+
+%\cvsubsection{Multi-line with longer description}
+%\begin{cvtable}
+%	\cvitemshort{Key}{Some further description. Can fill even more than
+%		only one single line while still keeping the correct indendation level.}
+%	\cvitemshort{Key}{Some further description. Can fill even more than
+%		only one single line while still keeping the correct indendation level.}
+%	\cvitemshort{Key}{Some further description. Can fill even more than
+%		only one single line while still keeping the correct indendation level.}
+%\end{cvtable}
+
+%\cvsection{cvpubitem}
+%\begin{cvtable}
+%	\cvpubitem{Publication title}{Authors}{Journal}{Year}
+%	\cvpubitem{Publication title}{Authors}{Journal}{Year}
+%	\cvpubitem{Publication title that is spanning over multiple lines and still
+%		does not look too bad}{Authors}{Journal}{Year}
+%\end{cvtable}
+
+\cvsection{References}
+\begin{cvtable}
+	\cvpubitem{Huynh The Minh, Data Engineer}{Parcel Perform}{htminh2307@gmail.com}{Ref. 1}
+	\cvpubitem{Nguyen Nhat Nam, Data Scientist}{CEL}{nathan.nguyennhat@gmail.com}{Ref. 2}
+\end{cvtable}
+\cvsignature
+
+\end{document}
