@@ -132,6 +132,9 @@
 			\social{\faGithub}
 				{https://github.com/dangnhatsimon}
 				{Github}
+                \social{\faLeetCode}
+				{https://leetcode.com/u/dangnhatsimon/}
+				{LeetCode}
 		\end{icontable}
 
 	
@@ -149,6 +152,7 @@
     \textbf{IBM Skills Network}\\{\href{https://www.coursera.org/account/accomplishments/specialization/certificate/KBYR4MSPABQ5}{Data Engineering. (2022)}}\\
     \textbf{DataCamp}\\
     {\href{https://www.datacamp.com/completed/statement-of-accomplishment/track/f5a2f36cc340f546df4cf0b90eb172a8eb919a97}{Professional Data Engineer. (2024)}}\\
+    {\href{https://www.datacamp.com/completed/statement-of-accomplishment/track/41b2fb00f337e93c50fcae8674ee68ce97224c02}{Big Data with PySpark. (2024)}}\\
     \textbf{Google Career}\\{\href{https://coursera.org/share/96a1a8db90424f56a3ada058c9f1ab7c}{IT Automation with Python. (2021)}}\\{\href{https://coursera.org/share/81539bd07606f96b7ae9b995b37e0fa8}{Data Analytics. (2021)}}\\
 }
 %-------------------------------------------------------------------------------
@@ -231,24 +235,19 @@
 \begin{cvtable}[3]
      \cvitem{May 2024 -- Present}{Data Engineer Specialist}{\\\href{https://www.greenfeed.com.vn/en/}{GREENFEED Vietnam Corporation - Fulltime}}{
     - GREENFEED is a fully integrated clean food chain FEED – FARM – FOOD with the mission to build quality and trusted brands that relentlessly innovate and create sustainable values for customers and society.\\
-    - ELT Process: design, build, and test ELT processes using Docker, integrating data from diverse sources such as SAP, Solomon, MISA, and Porcitec software.\\
-    - Data Pipeline: develop and monitor robust data pipelines utilizing Airbyte and Airflow.\\
-    - Data Migration \& Synchronization: manage data migrations and synchronization from internal servers and databases to AWS services like S3 and Redshift.\\
-    - Data Warehouse: contribute to the development and validation of a new data warehouse in domain Supply Chain and Financial \& Accounting on Redshift, designed from scratch.\\
-    - Data Transformation: leverage DBT and Python, Java for processing and transforming data, delivering cleansed and organized datasets for data analysts.\\
-    - Social Media: build and manage data pipelines from social media platforms like Facebook, Google, and LinkedIn APIs, as well as the PICTraq API, to Redshift for harnessing external data sources for deeper insights.\\
-    - Documentation: maintain comprehensive documentation for all data processes, pipelines, and architectures.\\
-    - Collaboration: work closely with data analysts and other stakeholders to understand their data needs and deliver accurate, timely data solutions, ensure that data transformations across the FEED, FARM, and FOOD segments are aligned with business goals.\\
-    - Skills: Python, Java, AWS, Data Architecture, Docker, Kubernetes, GitLab, Integrated Businesses in Closed Loop.}
-    \cvitem{Apr 2024 -- Apr 2024}{Back End Engineer}{\\\href{https://definer.jp/}{Definer Inc.  - Remote Parttime}}{
-    - Definer designs and develops solutions, builds DevOps, automates cloud IT infrastructure construction, and builds analytical platforms for big data.\\
-    - Solution Design \& DevOps: design and develop comprehensive solutions, focusing on building and automating cloud IT infrastructure.\\
-    - Database Interaction: utilize Prisma as an interface to interact with databases, leveraging its type-safe and auto-generated query builder.\\
-    - AWS \& CI/CD: create task definitions on AWS and build configuration files such as CircleCI, docker-compose, and Dockerfile to automate the build, test, and deployment processes, streamline the lifecycle of application development and deployment.
-    - Cloud Data: process data gathered from social media on cloud platforms and develop Python scripts to automate tasks on Google BigQuery, AWS S3, AWS Lambda, and AWS Fargate.\\
-    - Web Development: use Flask and REST API to build robust and scalable websites that meet user requirements and align with business objectives.
-    - Big Data Platforms: build and manage analytical platforms for big data, enabling the processing and analysis of vast datasets.\\
-    - Skills: AWS, DevOps, Docker Swarm, Prisma ORM, Microservices, Flask, Back-End Web Development, SQL, Python, REST APIs, CircleCI, GCP.}
+    - ELT \& Data Integration: designed, built, and tested end-to-end ELT workflows using Docker, integrating data from diverse sources such as SAP, Solomon, MISA, Porcitec, and FileSystem.\\
+    - Streaming Data Pipelines: developed real-time data pipelines using Apache Kafka and Spark Streaming, enabling low-latency processing of streaming data from IoT devices and external sources.\\
+    - Batch Data Processing: designed and executed scheduled data transformation workflows using PySpark on Apache Airflow \& Spark, efficiently processing large-scale batch data.\\
+    - Big Data Platform: built from scratch a Docker-based big data platform using Dockerfile and Docker Compose, ensuring scalable and efficient deployment of Apache Spark, Kafka, and Airflow.\\
+    - Data Pipelines \& Orchestration: developed and monitored robust batch and streaming pipelines using Airbyte, Airflow, Apache Beam (Dataflow), Spark Streaming, and Structured Streaming.\\
+    - CI/CD: Implemented GitLab CI/CD pipelines to automate testing, build, and deployment processes.\\
+    - Metadata Management \& Data Lineage: implemented OpenLineage, DataHub to track and manage data lineage, dependencies, and metadata across Airflow and Spark pipelines.\\
+    - Data Migration: managed migration and synchronization of data from internal systems to AWS services such as S3 and Redshift.\\
+    - Data Lakehouse: designed, built from scratch, and validated an AWS-based Lakehouse architecture for domains including Farm, Food, Social Media, Supply Chain, and Financial \& Accounting.\\
+    - Data Transformation: leveraged DBT, Python, and Java to deliver clean, structured datasets for analytics and business intelligence.\\
+    - Social Media Data Integration: built and managed data pipelines from social media platforms and APIs to the Lakehouse, enabling deeper insights from external data sources.\\
+    - Documentation \& Collaboration: maintained through documentation and collaborated closely with stakeholders to ensure timely and aligned data solutions across FEED, FARM, and FOOD.\\
+    - Skills: Python, Java, AWS, GCP, Spark, Beam, Kafka, Data Architecture, Docker, Kubernetes, GitLab, CI/CD, Integrated Businesses in Closed Loop.}
 \end{cvtable}
 
 
@@ -295,17 +294,22 @@
 \makebacksidebar
 
 \cvsection{}
-\begin{cvtable}[3]  
-    \cvitem{Oct 2022 -- May 2024}{Data Engineer}{\\\href{https://pecc2.com/}{PECC2 - Fulltime}}{
-    - Data Ingestion \& Processing: manage the ingestion of data from various monitoring systems at power plants, processing data at a rate of 1GB/day, ensure that data is always available for the company's Data Scientist and ML Teams, enabling them to perform timely and accurate analyses.\\
-    - Big Data: contribute to the company's Big Data Development Plan, focusing on the implementation of ETL processes and data pipelines, includes architecting, populating, and deploying data warehouses, as well as contributing to interactive reports that are streamed to end users to enhance customer experience.\\
-    - Web Scraping \& API: perform web scraping and data extraction, efficiently handling dynamic websites and pagination.\\
-    - Database Management: design, create, and manage relational databases, applying advanced SQL techniques such as views, transactions, stored procedures, and joins.\\
-    - Shell Scripting \& Automation: develop shell scripts using Linux commands and schedule cron jobs to automate various tasks, ensuring system efficiency and reliability. Automating catalog updates, fetching supplier data, processing text files, and creating and modifying documents and messages with Python.\\
-    - NoSQL \& Big Data: develop a working knowledge of NoSQL and Big Data technologies, manage and analyze large datasets effectively.\\
-    - Custom Tool: create a Telegram bot that interacts with the API to provide real-time data. Developing search functions and simple GUIs to support internal operations, including keyword search across multiple files and database interactions.\\
-    - System Monitoring \& Reporting: write scripts to check the health status of systems, ensuring that all operations run smoothly, automate the summarization and processing of sales data, generating PDF reports that are distributed via email, enhancing reporting efficiency.\\
-    - Skills: Data Science, ETL \& Data Pipelines, RDBMS, NoSQL and Big Data, Apache Spark, Python Programming, Data Analysis, SQL, Shell Scripting, Docker, Git, Cloud.}    
+\begin{cvtable}[3]
+    \cvitem{Oct 2022 -- May 2024}{Data Engineer}{\\\href{https://pecc2.com/}{PECC2 - Fulltime}
+    \\\href{https://definer.jp/}{Definer - Remote Part-time}}{
+    - Definer specializes in building DevOps, automating cloud IT infrastructure, and developing analytical platforms for big data. PECC2 is a leading consultancy in the electricity energy industry, delivering power generation, transmission, and distribution solutions while leveraging data for efficiency and innovation.\\
+    - Solution Design \& DevOps: architected and implemented comprehensive solutions with a focus on automating cloud IT infrastructure and workflows.\\
+    - AWS \& CI/CD: developed task definitions and configuration files (CircleCI, Docker Compose, Dockerfile) to automate build, test, and deployment processes on AWS.\\
+    - Containerization \& Orchestration: built Docker-based environments for scalable deployment of applications and data processing workflows.\\
+    - Data Ingestion \& Processing: managed ingestion pipelines processing 1GB/day from power plant monitoring systems, ensuring data availability for Data Scientist and ML teams.\\
+    - ETL \& Data Warehousing: designed and deployed data warehouses, built ETL pipelines, and developed interactive reports to enhance customer insights.\\
+    - Data Migration \& Cloud Storage: automated data synchronization between internal servers and cloud platforms like AWS (S3, Redshift) and Google BigQuery.\\
+    - Web Scraping \& API Development: extracted and processed data from dynamic JavaScript websites with pagination, utilizing APIs for automation and real-time insights.\\
+    - Database Management: designed and optimized relational databases with advanced SQL techniques (views, transactions, stored procedures, joins), ensuring high performance and reliability.\\
+    - Scripting \& Workflow Automation: developed Linux shell scripts, Python scripts, and cron jobs to automate catalog updates, supplier data processing, and document generation.\\
+    - NoSQL Databases: designed and optimized large-scale NoSQL databases using MongoDB and Cassandra to handle high-throughput workloads and unstructured data efficiently.\\
+    - Custom Tools \& Monitoring: created internal tools such as a Telegram bot for real-time data retrieval, keyword search GUIs, and system health monitoring scripts.\\
+    - Skills: Data Engineering, ETL \& Data Pipelines, RDBMS, NoSQL and Big Data, Spark, Kafka, Beam, CI/CD, Python, SQL, Scripting, Docker, Git, Cloud.}    
 \end{cvtable}
 
 \cvsection{Skills}
@@ -316,9 +320,10 @@
     \cvitem{Framework}{Flask, Django, Spring, Data Engineering.}{}{}
     \cvitem{Scripting}{Bash, Shell on Linux, Git.}{}{}
     \cvitem{Database}{SQL(MySQL, PostgreSQL, MSSQL), NoSQL(MongoDB, Cassandra), SAP.}{}{}
-    \cvitem{Big Data}{Hadoop, Spark, Kafka.}{}{}
-    \cvitem{Cloud}{AWS, Azure, GCP, IBM.}{}{}
-    \cvitem{DevOps}{Docker.}{}{}
+    \cvitem{Big Data}{Spark, Kafka, Beam, Hadoop.}{}{}
+    \cvitem{Cloud}{AWS, GCP, IBM, Azure.}{}{}
+    \cvitem{DevOps}{Docker, Kubernetes, GitLab CI.}{}{}
+    \cvitem{Metadata}{OpenLineage, DataHub.}{}{}
     \cvitem{Visualization}{Tableau, Power BI.}{}{}
     \cvitem{Soft Skills}{Detail-oriented, Structured \& Analytical Thinking, Problem Solving, Teamwork, Diligent, Energentic, Resilient.}{}{}
    % \chartlabel{Detail-oriented}
